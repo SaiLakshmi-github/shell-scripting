@@ -1,6 +1,6 @@
 #!/bin/bash
-Person1=Ramesh
-Person2=Suresh
+Person1=Sachin
+Person2=Rohit
 echo "Hello World! I am learning shell scripting.."
 echo "$Person1: Hi $Person2, Good Morning"
 echo "$Person2: Good morning, $Person1"
