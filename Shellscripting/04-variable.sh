@@ -1,3 +1,3 @@
 #!/bin/bash
-persons=("Ramesh Srinivas Siva")
-echo "${persons[0]}"
+persons=("Ramesh" "Srinivas" "Siva")
+echo "All persons: ${persons[0]}"
