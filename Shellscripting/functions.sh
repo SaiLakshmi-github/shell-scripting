@@ -20,7 +20,7 @@ then
 echo "Error:: please run this script with root access"
 exit 1
 fi
-yum install mysqldd -y &>>$Logfile
+yum install mysql -y &>>$Logfile
 Validate $? "installing mysql"
 yum install postfix -y &>>$Logfile
 Validate $? "installing Postfix"
