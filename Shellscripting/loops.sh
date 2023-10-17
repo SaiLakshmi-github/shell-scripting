@@ -30,4 +30,6 @@ UserID=$(id -u)
 for i in @1
     do
     yum install $i -y &>>$Logfile
+    Validate $? "$i"
+
     
