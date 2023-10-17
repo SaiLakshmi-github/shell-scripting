@@ -26,7 +26,7 @@ UserID=$(id -u)
     exit 1
     fi
     
-for i in @1
+for i in $@
     do
         yum list installed $i &&>>$Logfile
         if [ $? -ne 0 ]
