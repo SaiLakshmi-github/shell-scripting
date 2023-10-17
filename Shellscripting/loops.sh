@@ -28,8 +28,7 @@ UserID=$(id -u)
     fi
     
 packages = postfix github mssql
-for i in packages
+for i in $packages
     do
     yum install $i -y &>>$Logfile
     
-}
