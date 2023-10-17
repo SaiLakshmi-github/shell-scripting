@@ -14,8 +14,7 @@ Validate(){
     then
     echo -e " $2... $R  Failure $N"
     else
-    echo -e "$2.. is $G Success $N"
-    else
+    echo -e "$2..  $G Success $N"
     echo -e "$Y Package already installed $N" 
 
     fi
@@ -30,7 +29,6 @@ UserID=$(id -u)
     
 packages = postfix github mssql
 for i in packages
-{
     do
     yum install $i -y &>>$Logfile
     
