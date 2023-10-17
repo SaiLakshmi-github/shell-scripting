@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$Date=$(date +%F)
+Date=$(date +%F)
 $Script_name=$0
 #implementation of log file
 $Logfile=/tmp/$Script_name-$Date.log
