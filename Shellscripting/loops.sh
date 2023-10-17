@@ -28,11 +28,11 @@ UserID=$(id -u)
     
 for i in $@
     do
-        yum list installed $i &&>>$Logfile
+        yum list installed $i &>>$Logfile
         if [ $? -ne 0 ]
         then
         echo " $i is not installed..let's install it"
-        yum install $i -y &&>>$Logfile
+        yum install $i -y &>>$Logfile
         Validate $? "$i"
         else
         echo -e "$Y $i is already installed $N"
