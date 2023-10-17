@@ -1,15 +1,23 @@
 #!/bin/bash
 
 Date=$(date +%F)
-$Script_name=$0
+Script_name=$0
 #implementation of log file
-$Logfile=/tmp/$Script_name-$Date.log
+Logfile=/tmp/$Script_name-$Date.log
+R=\e[31m
+G=\e[32m
+Y=\e[33m
+N=\e[0m
+
 Validate(){
        if [ $1 -ne 0 ]
     then
-    echo " $2... is Failure"
+    echo -e " $2... $R  Failure $N"
     else
-    echo "$2.. is Success"
+    echo -e "$2.. is $G Success $N"
+    else
+    echo -e "$Y Package already installed $N" 
+
     fi
    
 }
@@ -24,6 +32,6 @@ packages = postfix github mssql
 for i in packages
 {
     do
-    yum install $i -y
+    yum install $i -y &>>$Logfile
     
 }
