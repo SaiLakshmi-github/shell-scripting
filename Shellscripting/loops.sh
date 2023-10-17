@@ -15,7 +15,8 @@ Validate(){
     echo -e " $2... $R  Failure $N"
     else
     echo -e "$2..  $G Success $N"
-    echo -e "$Y Package already installed $N" 
+    else
+    echo -e "$2.. $Y Package already installed $N" 
 
     fi
    
