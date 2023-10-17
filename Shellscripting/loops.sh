@@ -4,10 +4,10 @@ Date=$(date +%F)
 Script_name=$0
 #implementation of log file
 Logfile=/tmp/$Script_name-$Date.log
-R=\e[31m
-G=\e[32m
-Y=\e[33m
-N=\e[0m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 Validate(){
        if [ $1 -ne 0 ]
