@@ -27,7 +27,7 @@ UserID=$(id -u)
     exit 1
     fi
     
-for i in git postfix mssql
+for i in git postfix mysql
     do
     yum install $i -y &>>$Logfile
     done
